@@ -1,0 +1,19 @@
+@hostname = localhost
+@port = 8080
+@host = {{hostname}}:{{port}}
+@contentType = application/json
+@createdAt = {{$datetime iso8601}}
+@modifiedBy = {{$processEnv USERNAME}}
+
+GET http://{{host}}/planets
+
+###
+
+POST http://{{host}}/planets
+Content-Type: application/json
+
+{
+    "name" : "nome",
+    "climate": "hot",
+    "terrain": "arid"
+}
