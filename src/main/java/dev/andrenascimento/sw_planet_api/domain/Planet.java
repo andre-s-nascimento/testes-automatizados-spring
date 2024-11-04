@@ -25,6 +25,14 @@ public class Planet {
         this.terrain = terrain;
     }
 
+    public Planet(String climate, String terrain) {
+        this.climate = climate;
+        this.terrain = terrain;
+    }
+
+    public Planet() {
+    }
+
     public Long getId() {
         return id;
     }
@@ -58,7 +66,7 @@ public class Planet {
     }
 
     @Override
-    public boolean equals(Object obj){
+    public boolean equals(Object obj) {
         return EqualsBuilder.reflectionEquals(obj, this);
     }
 }
