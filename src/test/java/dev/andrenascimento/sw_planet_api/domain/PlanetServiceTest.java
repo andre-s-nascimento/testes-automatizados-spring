@@ -5,12 +5,9 @@ import static dev.andrenascimento.sw_planet_api.common.PlanetConstants.PLANET;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatCode;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
-import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.Mockito.doThrow;
-import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import java.util.Collections;
@@ -37,7 +34,7 @@ public class PlanetServiceTest {
     @Mock
     private PlanetRepository planetRepository;
 
-    // operação_estado_retornoesperado
+    // operação_estado_retorno_esperado
     @Test
     public void createPlanet_WithValidData_ReturnsPlanet() {
         // Arrange - Preparar
